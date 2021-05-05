@@ -7,10 +7,21 @@ import {
 } from "@react-navigation/drawer";
 import { DrawerStackRoutes } from "../Routes/Routes";
 import MainStackNav from "./MainStackScreen";
-import { Text, StatusBar } from "react-native";
+import { View, Text, StatusBar } from "react-native";
 import Layout from "../screens/Layout";
-
 import { Ionicons } from "@expo/vector-icons";
+import styled from "styled-components/native";
+
+const StyledImgContainer = styled(View)`
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+`;
+const StyledImgContainerText = styled(Text)`
+  padding-left: 16px;
+  color: #fff;
+`;
 
 const DrawerStack = createDrawerNavigator();
 
@@ -20,6 +31,10 @@ const CustomDrawerContent = (props?: any) => {
 
   return (
     <DrawerContentScrollView {...props}>
+      <StyledImgContainer>
+        <StyledImgContainerText>Aquí iría la imagen</StyledImgContainerText>
+      </StyledImgContainer>
+
       {DrawerStackRoutes?.length > 0 &&
         DrawerStackRoutes.map(screen => (
           <DrawerItem
@@ -96,9 +111,6 @@ const DrawerStackScreens = ({ toggleDrawer }: { toggleDrawer: any }) => {
                     onPress={toggleDrawer}
                   />
                 )
-                // headerStyle: {
-                //   backgroundColor: "#f4511e"
-                // }
               })}
             >
               {props => (

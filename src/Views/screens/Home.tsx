@@ -3,7 +3,6 @@ import styled from "styled-components/native";
 import { ButtonGroup } from "react-native-elements";
 import { View, Text, Button } from "react-native";
 import { useTheme } from "@react-navigation/native";
-import ActionButton from "../components/ActionButton";
 
 const HomeDiv = styled(View)`
   align-items: center;
@@ -18,7 +17,6 @@ const Home = ({ navigation }: { navigation?: any }) => {
   const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
   const buttons = ["Hello", "World", "Buttons"];
   const theme = useTheme();
-  const { colors } = theme;
 
   const updateIndex = (index: number) => {
     setSelectedIndex(index);

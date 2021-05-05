@@ -1,6 +1,7 @@
 import Home from "../screens/Home";
 import AddExpense from "../screens/AddExpense";
 import CreateItemModal from "../screens/CreateItemModal";
+import PhotoPreview from "../screens/PhotoPreview";
 
 export const MainStackRoutes = [
   {
@@ -8,6 +9,13 @@ export const MainStackRoutes = [
     component: Home,
     options: {
       title: "Home"
+    }
+  },
+  {
+    name: "photo preview",
+    component: PhotoPreview,
+    options: {
+      title: "Photo Preview"
     }
   },
   {
