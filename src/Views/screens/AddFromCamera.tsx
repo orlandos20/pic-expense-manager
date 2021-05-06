@@ -15,6 +15,7 @@ const AddFromCamera = ({ navigation }: { navigation: any }) => {
   useEffect(() => {
     if (hasPermission) {
       (async () => {
+        console.log("Entró en el async de la Camara");
         let image = await ImagePicker.launchCameraAsync({
           mediaTypes: ImagePicker.MediaTypeOptions.Images,
           allowsEditing: true,
@@ -23,18 +24,17 @@ const AddFromCamera = ({ navigation }: { navigation: any }) => {
           base64: true
         });
 
-        if (image.cancelled) {
+        if (image.cancelled && !image) {
           navigation.goBack();
         }
 
         if (image) {
-          console.log("image from imagePicker --> ", image);
           takePhoto(image);
           navigation.goBack();
         }
       })();
     }
-  }, []);
+  }, [hasPermission]);
 
   return null;
 };
