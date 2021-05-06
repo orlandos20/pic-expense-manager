@@ -1,5 +1,6 @@
 import Home from "../screens/Home";
-import AddExpense from "../screens/AddExpense";
+import AddFromCamera from "../screens/AddFromCamera";
+import AddFromGallery from "../screens/AddFromGallery";
 import CreateItemModal from "../screens/CreateItemModal";
 import PhotoPreview from "../screens/PhotoPreview";
 
@@ -19,15 +20,15 @@ export const MainStackRoutes = [
     }
   },
   {
-    name: "Add a Expense",
-    component: AddExpense,
+    name: "Add from Camera",
+    component: AddFromCamera,
     options: {
       title: "Add a Expense"
     }
   },
   {
-    name: "Modal",
-    component: CreateItemModal,
+    name: "Add from Gallery",
+    component: AddFromGallery,
     options: {
       title: "add item"
     }
@@ -36,16 +37,16 @@ export const MainStackRoutes = [
 
 export const DrawerStackRoutes = [
   {
-    name: "Add a Expense",
-    component: AddExpense,
+    name: "Add from Camera",
+    component: AddFromCamera,
     options: {
       title: "Add a Expense",
       headerShown: true
     }
   },
   {
-    name: "Modal",
-    component: CreateItemModal,
+    name: "Add from Gallery",
+    component: AddFromGallery,
     options: {
       title: "add item",
       headerShown: true

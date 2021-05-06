@@ -8,9 +8,9 @@ const ActionButton = ({ navigation }: { navigation: any }) => {
   const theme = useTheme();
   const { colors } = theme;
 
-  const mappedData = DrawerStackRoutes.map(item => item.name);
+  const ActionButonMenu = DrawerStackRoutes.map(item => item.name);
 
-  const actions = mappedData.map((name, index) => {
+  const actions = ActionButonMenu.map((name, index) => {
     return {
       text: name,
       textColor: colors.text,
